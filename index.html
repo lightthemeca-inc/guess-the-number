@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+    <div class="glow glow3"></div>
+    <div class="glow glow4"></div>
+
+    <div class="game">
+
+        <h1>🎯 Guess the Number</h1>
+
+<p id="rangeText">I'm thinking of a number from 1 to 50.</p>
+
+<div class="difficulty">
+<button class="easy" onclick="setDifficulty(20)">🟢 EASY</button>
+<button class="medium" onclick="setDifficulty(50)">🟡 MEDIUM</button>
+<button class="hard" onclick="setDifficulty(100)">🔴 HARD</button>
+</div>
+
+        <input id="guessInput" type="number" placeholder="Your guess">
+
+        <button onclick="checkGuess()">GUESS</button>
+
+        <h2 id="message"></h2>
+
+        <p id="guessCount">Guesses: 0</p>
+
+        <p id="score">Score: 1000</p>
+
+        <p id="highScore">🏆 High Score: 0</p>
+
+        <button id="playAgain" onclick="newGame()">🔄 PLAY AGAIN</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

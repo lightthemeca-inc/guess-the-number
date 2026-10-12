@@ -1,0 +1,281 @@
+body {
+    background: linear-gradient(
+        135deg,
+        #0f0c29,
+        #302b63,
+        #24243e,
+        #6a11cb
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.game {
+    background: rgba(15, 15, 35, 0.72);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    width: 420px;
+    margin: 0;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.4),
+        0 0 60px rgba(0, 198, 255, 0.15);
+}
+
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #8b5cf6,
+        0 0 20px #8b5cf6,
+        0 0 40px #6a11cb;
+}
+
+
+p {
+    font-size: 18px;
+}
+
+input {
+    padding: 16px;
+    font-size: 20px;
+    width: 180px;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    border: 2px solid rgba(139, 92, 246, 0.6);
+    border-radius: 14px;
+
+    text-align: center;
+    margin: 10px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+input:focus {
+    border-color: #a78bfa;
+
+    box-shadow:
+        0 0 10px #8b5cf6,
+        0 0 25px rgba(139, 92, 246, 0.6);
+
+    transform: scale(1.03);
+}
+
+button {
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #8b5cf6, #6a11cb);
+    color: white;
+
+    border: none;
+    border-radius: 14px;
+
+
+    margin: 5px;
+
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.5),
+        0 0 25px rgba(139, 92, 246, 0.25);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px #8b5cf6,
+        0 0 35px #8b5cf6,
+        0 0 55px rgba(139, 92, 246, 0.5);
+}
+
+
+#message {
+    font-size: 28px;
+    min-height: 35px;
+}
+
+#playAgain {
+    background-color: #2196F3;
+}
+
+#playAgain:hover {
+    background-color: #1976D2;
+}
+
+#message {
+    font-size: 28px;
+    min-height: 35px;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.glow {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    z-index: -1;
+}
+.glow1 {
+    top: 10%;
+    left: 10%;
+    animation: float1 8s ease-in-out infinite;
+}
+
+.glow2 {
+    background: #00c6ff;
+    top: 15%;
+    right: 5%;
+}
+
+.glow3 {
+    background: #00ff88;
+    bottom: 5%;
+    left: 5%;
+}
+
+.glow4 {
+    background: #ff2cdf;
+    bottom: 10%;
+    right: 10%;
+}
+@keyframes float1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, 40px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.difficulty {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.difficulty button {
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+
+.easy {
+    background: linear-gradient(135deg, #00c853, #00e676);
+    box-shadow:
+        0 0 10px rgba(0, 230, 118, 0.5),
+        0 0 25px rgba(0, 230, 118, 0.25);
+}
+
+.medium {
+    background: linear-gradient(135deg, #ffb300, #ffd54f);
+    color: #222;
+
+    box-shadow:
+        0 0 10px rgba(255, 193, 7, 0.6),
+        0 0 25px rgba(255, 193, 7, 0.3);
+}
+.hard {
+    background: linear-gradient(135deg, #ff1744, #ff5252);
+
+    box-shadow:
+        0 0 10px rgba(255, 23, 68, 0.6),
+        0 0 25px rgba(255, 23, 68, 0.3);
+}
+.easy:hover {
+    box-shadow:
+        0 0 15px #00e676,
+        0 0 35px #00e676,
+        0 0 55px rgba(0, 230, 118, 0.5);
+}
+
+.medium:hover {
+    box-shadow:
+        0 0 15px #ffd54f,
+        0 0 35px #ffd54f,
+        0 0 55px rgba(255, 213, 79, 0.5);
+}
+
+.hard:hover {
+    box-shadow:
+        0 0 15px #ff1744,
+        0 0 35px #ff1744,
+        0 0 55px rgba(255, 23, 68, 0.5);
+}
